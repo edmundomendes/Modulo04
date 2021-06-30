@@ -3,7 +3,7 @@
 </h1>
 
 <h2 align="center">
- Desafio 4-1: Header
+ Desafio 4-2: Card do Professor
 </h2>
 <br>  
 <p align="center">
@@ -18,17 +18,20 @@
 
 </p>
 
-## ✍ Desafio criar um header
+## ✍ Desafio criar o card do professor
 
-Nessa etapa foi criado um header com dois links: Teachers e Students
+Nessa etapa foi dada continuação no desafio anterior
 
-#### Arquivo de Dados
+##### Arquivo de Dados
+
+##### Browser-sync:
+Utilize as libs browser-sync e npm-run-all e rode os processos da sua aplicação e do browser-sync em paralelo.
 
 ##### Requisitos:
-- [x] Deve ser aplicado um background;
-- [x] Deve ser utilizado a fonte Roboto;
-- [x] Utilize o conceito de box-sizing e o seletor + para centralizar os seus links;
-- [x] Utilize o after e o transition para aplicar um efeito visual nos links quando o mouse passar por cima.
+- [x] A imagem deve ocupar 40% do card e os detalhes 60%;
+- [x] Utilize o seletor first-child e border-top para estilizar as divisórias entre os items;
+- [x] Utilize o keyframes e o animation para fazer uma animação do card;
+- [x] Utilize o box-shadow para aplicar uma sombra no card;
 
 
 ## :gear: Como usar
@@ -41,6 +44,9 @@ $ cd Modulo04
 
 # Instale as dependências do projeto
 $ npm install
+
+# Instale as dependências do projeto de desenvolvimento
+$ npm install browser-sync npm-run-all -D   
 
 # Rode o servidor
 $ npm start
