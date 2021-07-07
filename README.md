@@ -3,7 +3,7 @@
 </h1>
 
 <h2 align="center">
- Desafio 4-2: Card do Professor
+ Desafio 4-3: Formulário e Rota de cadastro do Professor
 </h2>
 <br>  
 <p align="center">
@@ -18,22 +18,19 @@
 
 </p>
 
-## ✍ Desafio criar o card do professor
+## ✍ Desafio criar o formulário e rota de cadastro do professor
 
-Nessa etapa foi dada continuação no desafio anterior
-
-##### Arquivo de Dados
-
-##### Browser-sync:
-Utilize as libs browser-sync e npm-run-all e rode os processos da sua aplicação e do browser-sync em paralelo.
-
+Nessa etapa você deve criar um formulário de cadastro do professor e uma rota do tipo post que irá realizar as validações e salvar os dados enviados.
 ##### Requisitos:
-- [x] A imagem deve ocupar 40% do card e os detalhes 60%;
-- [x] Utilize o seletor first-child e border-top para estilizar as divisórias entre os items;
-- [x] Utilize o keyframes e o animation para fazer uma animação do card;
-- [x] Utilize o box-shadow para aplicar uma sombra no card;
+- [x] Avatar url: campo do tipo url para cadastrar o caminho da imagem do professor;
+- [x] Nome completo: campo do tipo text;
+- [x] Data de nascimento: campo do tipo date;
+- [x] Grau de escolaridade: campo do tipo select (documentação do select) que deve conter as opções Ensino Médio Completo, Ensino Superior Completo, Mestrado e Doutorado;
+- [x] Tipo de aula: campo do tipo radio que deve conter as opções Presencial e À distância;
+- [x] Área de atuação: campo do tipo text que deve conter as informações das matérias que o          professor pode lecionar.
 
-
+##### Rota:
+Crie um arquivo teachers.js na raiz do seu projeto e faça a validação de todos os campos utilizando keys e o constructor Object. Além disso, utilize o método writeFile da lib fs para gerar um arquivo json que irá conter um array de todos os professores cadastrados. Ao final desses dois processos (validação e salvamento), faça o redirecionamento para a página de listagem de professores.
 ## :gear: Como usar
 ```bash
 # Clone este repositório
@@ -52,7 +49,10 @@ $ npm install browser-sync npm-run-all -D
 $ npm start
 
 # Acesse na web
-http://localhost:5000
+http://localhost:3000
+
+# Para acessar  a página de criação do cadastro
+http://localhost:3000/teachers/create
 
 ```
 

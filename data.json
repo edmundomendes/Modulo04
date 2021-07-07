@@ -1,0 +1,22 @@
+{
+  "teachers": [
+    {
+      "id": 1,
+      "avatar_url": "http://gg",
+      "name": "Ecenilma Mendes Barbosa",
+      "birth": "5103-12-14",
+      "education_level": "high_school",
+      "ocupation": "sasdadasd",
+      "location": "Presencial"
+    },
+    {
+      "id": 2,
+      "avatar_url": "http://gg",
+      "name": "Ecenilma Mendes Barbosa",
+      "birth": -27103075200000,
+      "education_level": "high_school",
+      "ocupation": "sasdadasd",
+      "location": "Distância"
+    }
+  ]
+}

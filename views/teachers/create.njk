@@ -1,0 +1,85 @@
+{% extends 'layout.njk' %}
+{% block content %}
+
+<form class="card" method='post' action='/teachers'>
+
+    <section
+        class="avatar" 
+        style="background: url(https://source.unsplash.com/collection/2220304/500x500) no-repeat center center/cover">
+    </section>
+
+    <section class="details">
+
+        <h3>Detalhes</h3>
+        
+        <div class="item">
+            <div>Avatar URL</div>
+            <input type="url"
+                   name='avatar_url'
+                   placeholder='http://'
+            >
+        </div>
+
+        <div class="item">
+            <div>Nome Completo</div>
+            <input type="text"
+                   name='name'
+                   placeholder='Nome do professor'
+            >
+        </div>
+
+         <div class="item">
+            <div>Idade</div>
+            <input 
+                type="date" 
+                name="birth"
+            >
+        </div>
+
+         <div class="item">
+            <div>Grau de escolaridade</div>
+            <select name="education_level">
+                <option value="high_school">Ensino Médio Completo</option>
+                <option value="college">Ensino Superior Completo</option>
+                <option value="master">Mestrado</option>
+                <option value="doctorate">Doutorado</option>
+            </select>
+        </div>
+
+         <div class="item">
+            <div>Tipo de aula</div>
+            <span>
+                <input 
+                    type="radio" 
+                    name="location"
+                    value='Presencial'
+                > 
+                Presencial
+            </span>
+
+            <span>
+                <input 
+                    type="radio" 
+                    name="location"
+                    value='Distância'
+                >
+                Distância
+            </span>
+        </div>
+
+         <div class="item">
+            <div>Área de atuação</div>
+            <input 
+            type="text"
+            name='ocupation'
+            placeholder='Separe as matérias que você pode lecionar por vírgula'
+            >
+        </div>
+
+    <button type='submit'>Salvar</button>
+
+    </section>
+
+</form>
+
+{% endblock content %}
