@@ -124,7 +124,6 @@ header{
 input{
     width: 93%;
     outline: none;
-    font-size: px;
     font-weight: bold;
 }
 input::placeholder{
@@ -137,7 +136,8 @@ input[type='radio']{
     width: initial;
     margin-right: 2px;
 }
-button[type='submit']{
+button[type='submit'],
+a.button{
     background-color: var(--primary-color);
     width: 90%;
     margin-top:20px;
@@ -145,4 +145,11 @@ button[type='submit']{
     color: white;
     border-radius: 4px;
     cursor: pointer;
+}
+a.button{
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    box-sizing: border-box;
+    margin-top: 0;
 }

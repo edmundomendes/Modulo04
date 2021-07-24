@@ -2,20 +2,11 @@
   "teachers": [
     {
       "id": 1,
-      "avatar_url": "http://gg",
-      "name": "Ecenilma Mendes Barbosa",
-      "birth": "5103-12-14",
-      "education_level": "high_school",
-      "ocupation": "sasdadasd",
-      "location": "Presencial"
-    },
-    {
-      "id": 2,
-      "avatar_url": "http://gg",
-      "name": "Ecenilma Mendes Barbosa",
-      "birth": -27103075200000,
-      "education_level": "high_school",
-      "ocupation": "sasdadasd",
+      "avatar_url": "https://source.unsplash.com/collection/2220304",
+      "name": "Katarina Mendes",
+      "birth": 1603584000000,
+      "education_level": "college",
+      "ocupation": "Matematica, Fisica, Historia",
       "location": "Distância"
     }
   ]
