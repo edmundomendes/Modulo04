@@ -82,7 +82,7 @@ header{
 
 .details{
     width: 480px;
-    padding:32px 32px 0 32px;
+    padding: 9px 32px 0 32px;
 }
 .details .item{
     border-top: solid 1px rgba(0,0,0,0.1);
@@ -140,16 +140,19 @@ button[type='submit'],
 a.button{
     background-color: var(--primary-color);
     width: 90%;
-    margin-top:20px;
     padding: 8px 20px;
     color: white;
     border-radius: 4px;
     cursor: pointer;
 }
-a.button{
+a.button,#form_delete button[type='submit']{
     text-decoration: none;
     text-align: center;
     display: block;
     box-sizing: border-box;
     margin-top: 0;
+}
+#form_delete button[type='submit'] {
+    margin-top: 8px;
+    background-color: red;
 }
