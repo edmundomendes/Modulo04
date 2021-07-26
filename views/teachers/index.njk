@@ -1,43 +1,35 @@
 {% extends 'layout.njk' %}
 {% block content %}
 
-<div class="card">
-    <section 
-        class="avatar" 
-        style="background: url(https://source.unsplash.com/collection/2220304/500x500) no-repeat center center/cover"></section>
-    <section class="details">
-        <h3>Detalhes</h3>
-        <div class="item">
-            <div>Nome Completo</div>
-            <div>Mayk Brito</div>
-        </div>
+<div class="card table-container">
 
-         <div class="item">
-            <div>Idade</div>
-            <div>28</div>
-        </div>
+    <table width=100%>
+        <thead>
+            <tr>
+                <th>Nome Completo</th>
+                <th>Acompanhamento</th>
+                <th>Ação</th>
+            </tr>
+        </thead>
 
-         <div class="item">
-            <div>Grau de escolaridade</div>
-            <div>Doutorado</div>
-        </div>
+        <tbody>
+            {%for teacher in teachers%}
+            <tr>
+                <td>
+                <span style='background-image: url({{teacher.avatar_url}})'>
+                </span>
+                 {{teacher.name}}
+                 </td>
+                <td>
+                <span>
+                    {{teacher.ocupation}}</td>
+                </span>
+                <td><a href="/teachers/{{teacher.id}}">Ver</a></td>
+            </tr>
+            {%endfor%}
+        </tbody>
+    </table>
 
-         <div class="item">
-            <div>Tipo de aula</div>
-            <div>Presencial ou à distância</div>
-        </div>
-
-         <div class="item">
-            <div>Acompanhamento</div>
-            <span>Matemática</span>
-            <span>Fisíca</span>
-        </div>
-
-         <div class="item">
-            <div>Desde</div>
-            <div>30/06/2021</div>
-        </div>
-    </section>
 </div>
 
 {% endblock content %}
