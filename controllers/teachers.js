@@ -1,12 +1,16 @@
 const fs = require('fs')
-const data = require('./data.json')
-const {age,date,graduation} = require('./utils.js')
+const data = require('../data.json')
+const {age,date,graduation} = require('../utils.js')
 
 //index
 exports.index = function(req,res){
     return res.render('teachers/index',{ teachers:data.teachers})
 }
 //create
+exports.create = function(req,res){
+    return res.render('teachers/create')
+}
+//create POST
 exports.post = function(req,res){
     const keys = Object.keys(req.body)
 
@@ -63,7 +67,7 @@ exports.edit = function(req,res){
 
     const teacher = {
         ...foundTeacher,
-        birth:date(foundTeacher.birth)
+        birth:date(foundTeacher.birth).iso
     }
     return res.render('teachers/edit',{teacher})
 }

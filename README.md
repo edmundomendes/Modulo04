@@ -3,7 +3,7 @@
 </h1>
 
 <h2 align="center">
-  Desafio 4-6: Listagem de professores
+  Desafio 4-7: Estruturando estudantes
 </h2>
 <br>  
 <p align="center">
@@ -20,24 +20,51 @@
 
 ## :rocket: Sobre o desafio
 
-Nessa etapa você deve listar todos os professores salvos no arquivo `json` e apresentá-los em formato de tabela.
+Nessa etapa você deve reaproveitar para os estudantes toda a estrutura já criada para os professores. Além disso, deve implementar a lógica do menu ativo.
 
-##### Listagem
+### Estrutura
 
-Crie uma rota para repassar para o arquivo de listagem os dados dos professores salvos no arquivo `json`.
-### Tabela
+Reaproveite o código obedecendo os seguintes padrões:
 
-Crie um arquivo que irá mostrar os dados dos professores em formato de tabela. Utilize `Nome completo`, `Acompanhamento` e `Ação` como cabeçalhos.
+- Crie um arquivo `students.js` com a mesma estrutura que o `teachers.js`. Insira ambos os arquivos dentro uma pasta `controllers`;
+- Crie um array `students` vazio dentro do arquivo `json`;
+- Crie uma pasta `students` com a mesma estrutura de views que os professores;
+- Crie as rotas dos estudantes seguindo a mesma estrutura dos professores.
+### Menu Ativo
 
-### Estilização
+Crie um arquivo `scripts.js` e implemente a lógica do menu ativo utilizando o `location` e o `includes` da string. Além disso, implemente um botão de cadastro nas páginas de listagem de professores e estudantes.
 
-[x] A tabela deve ocupar todo o espaçamento do cartão;
+### Formulário
 
-[x] Os cabeçalhos e os valores devem estar centralizados;
+Faça os ajustes de professores para estudantes no formulário de criação. Além disso, remova os campos:
 
-[x] A imagem deve ser apresentada antes do nome. Deve ter formato circular e tamanho de 40px;
+- Grau de escolaridade;
+- Tipo de aula;
+- Acompanhamento;
+- Desde.
 
-[x] O campo `Acompanhamento` deve apresentar as matérias lecionadas de forma separada (array, assim como na página de apresentação de dados de um professor).
+e adicione os campos:
+
+- Email: campo do tipo `email`;
+- Ano escolar: campo do tipo `select` com todas as opções de anos escolares entre 5º ano do ensino fundamental e 3º ano do ensino médio;
+- Carga horária semanal: campo do tipo `number` que indica a quantidade de horas de aulas particulares que o aluno irá ter por semana.
+
+### Apresentação
+
+Faça os ajustes de professores para estudantes no método `post` do arquivo `students.js`. Além disso, implemente a nova estratégia de `id` (evitar repetição).
+
+### Edição
+
+Faça os ajustes de professores para estudantes na página de edição dos dados de um estudante. Implemente o campo `Aniverśario` onde é apresentado o dia e o mês do aniversário do estudante. Além disso, altere tanto no `edit.njk` dos professores quanto no dos alunos a `url` da seção de avatar. Utilize o campo `avatar_url` cadastrado em vez da api do unsplash.
+
+### Remoção
+
+Crie um arquivo `confirm.njk` e importe ele no seu arquivo `edit.njk`. Esse arquivo deve ser responsável por escutar o evento (`addEventListener`) de submit do form de remoção e solicitar pela confirmação do usuário (`confirm`). Caso o usuário cancele a remoção, deve-se cancelar o form (método `preventDefault`).
+
+### Listagem
+
+Faça os ajustes de professores para estudantes na página de listagem dos dados de um estudante. Remova a coluna de `Acompanhamento` e adicione as de `Email` e `Ano escolar`.
+
 ## :gear: Como usar
 ```bash
 # Clone este repositório
