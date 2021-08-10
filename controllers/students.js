@@ -1,6 +1,6 @@
 const fs = require('fs')
 const data = require('../data.json')
-const {age,date,grade} = require('../utils.js')
+const {date,grade} = require('../utils.js')
 
 //index
 exports.index = function(req,res){
