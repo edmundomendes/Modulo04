@@ -20,50 +20,46 @@
 
 ## :rocket: Sobre o desafio
 
-Nessa etapa você deve reaproveitar para os estudantes toda a estrutura já criada para os professores. Além disso, deve implementar a lógica do menu ativo.
+Esse é o primeiro desafio de uma sequência que irá implementar o banco de dados na aplicação desenvolvida no módulo anterior.
 
-### Estrutura
+Nessa etapa, você deve refatorar o código da sua aplicação e preparar o seu ambiente para trabalhar com banco de dados.
 
-Reaproveite o código obedecendo os seguintes padrões:
+### Criando Banco de dados
 
-- Crie um arquivo `students.js` com a mesma estrutura que o `teachers.js`. Insira ambos os arquivos dentro uma pasta `controllers`;
-- Crie um array `students` vazio dentro do arquivo `json`;
-- Crie uma pasta `students` com a mesma estrutura de views que os professores;
-- Crie as rotas dos estudantes seguindo a mesma estrutura dos professores.
-### Menu Ativo
+Utilizando a ferramenta postbird, crie **através de queries** um banco de dados chamado **my_teacher** e uma tabela com o nome de **teachers** que possua os seguintes campos:
 
-Crie um arquivo `scripts.js` e implemente a lógica do menu ativo utilizando o `location` e o `includes` da string. Além disso, implemente um botão de cadastro nas páginas de listagem de professores e estudantes.
+- id: INT e PRIMARY KEY;
+- avatar_url: TEXT e NOT NULL;
+- name: TEXT e NOT NULL;
+- birth_date: TIMESTAMP e NOT NULL;
+- education_level: TEXT e NOT NULL;
+- class_type: TEXT e NOT NULL;
+- subjects_taught: TEXT e NOT NULL;
+- created_at: TIMESTAMP e NOT NULL.
 
-### Formulário
+_Dicas: Para criar a tabela a partir de uma query, basta selecionar o banco no postbird e na aba **Query** rodar o comando **CREATE TABLE** especificando o nome da tabela e em seguida as colunas, por exemplo:_
 
-Faça os ajustes de professores para estudantes no formulário de criação. Além disso, remova os campos:
+```sql
+CREATE TABLE TEST(
+   ID INT PRIMARY KEY,
+   NAME TEXT NOT NULL
+);
+```
 
-- Grau de escolaridade;
-- Tipo de aula;
-- Acompanhamento;
-- Desde.
+_Para mais informações, dê uma olhada nesse [link](https://www.postgresqltutorial.com/postgresql-create-table/)_
 
-e adicione os campos:
+### Refatorando o Código
 
-- Email: campo do tipo `email`;
-- Ano escolar: campo do tipo `select` com todas as opções de anos escolares entre 5º ano do ensino fundamental e 3º ano do ensino médio;
-- Carga horária semanal: campo do tipo `number` que indica a quantidade de horas de aulas particulares que o aluno irá ter por semana.
+Após preparar o banco de dados, é preciso refatorar a sua aplicação para utilizá-lo. Você deve fazer as seguintes alterações:
 
-### Apresentação
+- Utilizar a nova estrutura de pastas (src, app e lib);
+- Corrija nos arquivos os caminhos relativos que precisar;
+- Utilize nos arquivos da pasta `controllers` a nova forma de exportar.
 
-Faça os ajustes de professores para estudantes no método `post` do arquivo `students.js`. Além disso, implemente a nova estratégia de `id` (evitar repetição).
+### Configurando BD na aplicação
 
-### Edição
+Por fim, instale a biblioteca `pg` e crie o arquivo de configuração do seu banco de dados (em uma pasta **config**) utilizando o `Pool`. Não esqueça de passar os dados necessários (**user, password, host, port e database**) na hora de instanciar (**new**) o Pool.
 
-Faça os ajustes de professores para estudantes na página de edição dos dados de um estudante. Implemente o campo `Aniverśario` onde é apresentado o dia e o mês do aniversário do estudante. Além disso, altere tanto no `edit.njk` dos professores quanto no dos alunos a `url` da seção de avatar. Utilize o campo `avatar_url` cadastrado em vez da api do unsplash.
-
-### Remoção
-
-Crie um arquivo `confirm.njk` e importe ele no seu arquivo `edit.njk`. Esse arquivo deve ser responsável por escutar o evento (`addEventListener`) de submit do form de remoção e solicitar pela confirmação do usuário (`confirm`). Caso o usuário cancele a remoção, deve-se cancelar o form (método `preventDefault`).
-
-### Listagem
-
-Faça os ajustes de professores para estudantes na página de listagem dos dados de um estudante. Remova a coluna de `Acompanhamento` e adicione as de `Email` e `Ano escolar`.
 
 ## :gear: Como usar
 ```bash
